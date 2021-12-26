@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "name": "cleanblog",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeyazGolge/cleanBlog.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BeyazGolge/cleanBlog.js/issues"
+  },
+  "homepage": "https://github.com/BeyazGolge/cleanBlog.js#readme",
+  "description": ""
+}
