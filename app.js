@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 5000;
 const path = require("path");
 const mongoose = require("mongoose");
 const Post = require("./models/Post");
@@ -12,10 +12,20 @@ const postController = require("./controllers/postController");
 const pageController = require("./controllers/pageController");
 
 //Connect DB
-mongoose.connect("mongodb://localhost/cleanblog-test-db", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose
+  .connect(
+    "mongodb+srv://BeyazGolge:005383@cluster0.x9qj7.mongodb.net/cleanBlog-db?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(() => {
+    console.log("connected to database");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 app.set("view engine", "ejs");
 
